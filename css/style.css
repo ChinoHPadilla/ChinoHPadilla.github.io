@@ -1,0 +1,29 @@
+.card{
+    border-color: orange;
+}
+
+.btn-primary{
+    background-color: orange;
+    border-color: orange;
+}
+
+.btn-primary:hover {
+    background-color: rgb(255, 193, 79);
+    border-color: rgb(255, 193, 79);
+}
+
+.btn-primary:checked {
+    background-color: rgb(255, 193, 79);
+    border-color: rgb(255, 193, 79);
+}
+
+.btn-outline-primary{
+    color: orange;
+    background-color: rgb(255, 255, 255);
+    border-color: orange;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgb(255, 193, 79);
+    border-color: rgb(255, 193, 79);
+}

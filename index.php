@@ -53,7 +53,7 @@ include 'backend/connection.php';
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
                                 <a class="btn" href="#" style="padding:0">
-                                    <!--<img src='img/categorias/productos/comida.jpg' class='d-block w-100' alt='Comida'>-->
+                                    <img src='assets/img/medicos.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='medicos'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Médicos</h5>
                                     </div>
@@ -64,7 +64,7 @@ include 'backend/connection.php';
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
                                 <a class="btn" href="#" style="padding:0">
-                                    <!--<img src='img/categorias/productos/para_pistear.jpg' class='d-block w-100' alt='Para Pistear'>-->
+                                    <img src='assets/img/Hospitales.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Hospitales'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Hospitales</h5>
                                     </div>
@@ -75,7 +75,7 @@ include 'backend/connection.php';
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
                                 <a class="btn" href="#" style="padding:0">
-                                    <!--<img src='img/categorias/productos/moda_y_accesorios.jpg' class='d-block w-100' alt='Moda y Accesorios'>-->
+                                    <img src='assets/img/Farmacias.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Farmacias'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Farmacias</h5>
                                     </div>
@@ -92,7 +92,7 @@ include 'backend/connection.php';
                                     echo '<a class="btn" href="login.php" style="padding:0">';
                                 }
                                 ?>
-                                <!--<img src='img/categorias/productos/tiendas_de_tecnologia.jpg' class='d-block w-100' alt='Tiendas de tecnología'>-->
+                                <img src='assets/img/CitasMedicas.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Citas medicas'>
                                 <div class="card-body">
                                     <h5 id="id_categoria" class="card-title text-categoria">Citas médicas</h5>
                                 </div>
@@ -103,15 +103,13 @@ include 'backend/connection.php';
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
                                 <a class="btn" href="#" style="padding:0">
-                                    <!--<img src='img/categorias/productos/comercios.jpg' class='d-block w-100' alt='Comercios'>-->
+                                    <img src='assets/img/Emergencia.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Emergencia'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Emergencia</h5>
                                     </div>
                                 </a>
                             </div>
                         </div>
-
-
 
                     </div>
                 </section>

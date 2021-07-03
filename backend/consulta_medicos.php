@@ -9,15 +9,18 @@ if (isset($_SESSION['usuario'])) {
 
 include 'connection.php';
 
-$query = "SELECT * FROM hospitales";
+$query = "SELECT * FROM doctores;";
 $result = $mysqli->query($query);   
 
 $text='';
 
     if($result ->num_rows > 0){
         while($row = $result->fetch_assoc()){
-
-        $link_img_perfil = 'assets/img/hospitales.png'; 
+            if ($row["sexo"]==1){
+                $link_img_perfil = 'assets/avatars/user_male.png';
+            }else{
+                $link_img_perfil = 'assets/avatars/user_female.png';
+            }
             
         $text.="
         <div class='card mb-3'>

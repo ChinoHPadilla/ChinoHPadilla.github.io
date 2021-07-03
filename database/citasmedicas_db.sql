@@ -6,12 +6,10 @@
 -- Tiempo de generación: 30-06-2021 a las 04:38:16
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
-create database citasmedicas_db;
-use citasmedicas_db;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;

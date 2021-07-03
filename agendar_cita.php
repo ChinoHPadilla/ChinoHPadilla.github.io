@@ -110,7 +110,7 @@ include 'backend/connection.php';
                                     </select>
                                 </p>
                                 <p> <select id="selectProblema" class="form-select" aria-label="Default select example">
-                                        <option value="1" selected>Elige el roblema</option>
+                                        <option value="1" selected>Elige el problema</option>
                                         <?php
                                         $query = "select * from problemas;";
                                         $result = $mysqli->query($query);

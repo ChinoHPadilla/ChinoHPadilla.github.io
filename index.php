@@ -63,7 +63,13 @@ include 'backend/connection.php';
 
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
-                                <a class="btn" href="#" style="padding:0">
+                                <?php
+                                if (isset($usuario['nombre'])) {
+                                    echo '<a class="btn" href="hospitales.php" style="padding:0">';
+                                } else {
+                                    echo '<a class="btn" href="login.php" style="padding:0">';
+                                }
+                                ?>
                                     <img src='assets/img/Hospitales.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Hospitales'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Hospitales</h5>

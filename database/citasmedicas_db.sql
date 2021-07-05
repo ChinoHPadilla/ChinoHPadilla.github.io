@@ -6,8 +6,7 @@
 -- Tiempo de generación: 03-07-2021 a las 02:17:05
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
-create database citasmedicas_db;
-use citasmedicas_db;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";

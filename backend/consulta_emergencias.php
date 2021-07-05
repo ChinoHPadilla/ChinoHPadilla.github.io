@@ -14,13 +14,18 @@ $result = $mysqli->query($query);
 
 $text='';
 
+<<<<<<< HEAD
     if(!empty($result) && $result->num_rows > 0){
+=======
+    if($result ->num_rows > 0){
+>>>>>>> master
         while($row = $result->fetch_assoc()){
 
         $link_img_perfil = 'assets/img/emergencia.png'; 
             
         $text.="
         <div class='card mb-3'>
+<<<<<<< HEAD
             <a class='btn' href='tel:".$row["telefono"]."'>
                 <div class='row no-gutters'>
                     <div class='col-2'>
@@ -33,6 +38,18 @@ $text='';
                     </div>
                 </div>
             </a>
+=======
+            <div class='row no-gutters'>
+                <div class='col-2'>
+                    <img class='card-img' loading='lazy' src='$link_img_perfil' alt='avatar' style='width: 100px;border-radius: 50%;'>
+                </div>
+                <div class='col-8'>
+                    <div class='card-body ms-4'>
+                        <h5 class='card-title'><i class='bi bi-telephone'></i> ".$row["telefono"]."</h5>
+                    </div>
+                </div>
+            </div>
+>>>>>>> master
         </div>
         ";
         } //fin del while

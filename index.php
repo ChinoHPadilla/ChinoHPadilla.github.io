@@ -16,7 +16,7 @@ include 'backend/connection.php';
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Citas Médicas</title>
+    <title>Inicio</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -52,7 +52,13 @@ include 'backend/connection.php';
                     <div id="categorias" class="row">
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
-                                <a class="btn" href="#" style="padding:0">
+                                    <?php
+                                    if (isset($usuario['nombre'])) {
+                                        echo '<a class="btn" href="medicos.php" style="padding:0">';
+                                    } else {
+                                        echo '<a class="btn" href="login.php" style="padding:0">';
+                                    }
+                                    ?>
                                     <img src='assets/img/medicos.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='medicos'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Médicos</h5>
@@ -63,7 +69,13 @@ include 'backend/connection.php';
 
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
-                                <a class="btn" href="#" style="padding:0">
+                                <?php
+                                if (isset($usuario['nombre'])) {
+                                    echo '<a class="btn" href="hospitales.php" style="padding:0">';
+                                } else {
+                                    echo '<a class="btn" href="login.php" style="padding:0">';
+                                }
+                                ?>
                                     <img src='assets/img/Hospitales.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Hospitales'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Hospitales</h5>
@@ -74,7 +86,13 @@ include 'backend/connection.php';
 
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
-                                <a class="btn" href="#" style="padding:0">
+                                <?php
+                                if (isset($usuario['nombre'])) {
+                                    echo '<a class="btn" href="farmacias.php" style="padding:0">';
+                                } else {
+                                    echo '<a class="btn" href="login.php" style="padding:0">';
+                                }
+                                ?>
                                     <img src='assets/img/Farmacias.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Farmacias'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Farmacias</h5>
@@ -102,7 +120,13 @@ include 'backend/connection.php';
 
                         <div class="col-6 col-lg-12">
                             <div class="card text-center mb-2">
-                                <a class="btn" href="#" style="padding:0">
+                                    <?php
+                                        if (isset($usuario['nombre'])) {
+                                            echo '<a class="btn" href="emergencias.php" style="padding:0">';
+                                        } else {
+                                            echo '<a class="btn" href="login.php" style="padding:0">';
+                                        }
+                                    ?>
                                     <img src='assets/img/Emergencia.png' class='card-img' style="width: 100px;border-radius: 50%;" alt='Emergencia'>
                                     <div class="card-body">
                                         <h5 id="id_categoria" class="card-title text-categoria">Emergencia</h5>

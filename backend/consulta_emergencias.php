@@ -9,30 +9,26 @@ if (isset($_SESSION['usuario'])) {
 
 include 'connection.php';
 
-$query = "SELECT cita.id, cita.fecha, cita.hora, doc.sexo, doc.nombre FROM citas as cita join doctores as doc on doc.id = cita.id_doctor WHERE cita.id_usuario = $id_usuario and cita.visible = 1;";
+$query = "SELECT * FROM emergencias";
 $result = $mysqli->query($query);   
 
 $text='';
 
-    if($result ->num_rows > 0){
+    if(!empty($result) && $result->num_rows > 0){
         while($row = $result->fetch_assoc()){
-            if ($row["sexo"]==1){
-                $link_img_perfil = 'assets/avatars/user_male.png';
-            }else{
-                $link_img_perfil = 'assets/avatars/user_female.png';
-            }
+
+        $link_img_perfil = 'assets/img/emergencia.png'; 
             
         $text.="
         <div class='card mb-3'>
-            <a class='btn' href='detalles_citas.php?id=".$row["id"]."'>
+            <a class='btn' href='tel:".$row["telefono"]."'>
                 <div class='row no-gutters'>
                     <div class='col-2'>
                         <img class='card-img' loading='lazy' src='$link_img_perfil' alt='avatar' style='width: 100px;border-radius: 50%;'>
                     </div>
                     <div class='col-8'>
                         <div class='card-body'>
-                            <h5 class='card-title'>".$row["nombre"]."</h5>
-                            <p class='card-text'><small class='text-muted'>".$row["fecha"]." / ".$row["hora"]."</small></p>
+                            <h5 class='card-title'><i class='bi bi-telephone'></i> ".$row["telefono"]."</h5>
                         </div>
                     </div>
                 </div>
@@ -48,7 +44,7 @@ $text='';
         $text.=" 
         <div class='card mb-3'>
             <div class='card-body'>
-                No hay ninguna cita medica
+                No hay ningun numero de emergencias
             </div>
         </div>
         ";

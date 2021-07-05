@@ -9,9 +9,9 @@ if (isset($_SESSION['usuario'])) {
 
 include 'backend/connection.php';
 
-$id_doctor = $mysqli->real_escape_string((strip_tags($_REQUEST["id"], ENT_QUOTES)));
+$id = $mysqli->real_escape_string((strip_tags($_REQUEST["id"], ENT_QUOTES)));
 
-$query = "SELECT * FROM citas as cita join doctores as doc on doc.id = cita.id_doctor WHERE cita.id_doctor = $id_doctor;";
+$query = "SELECT cita.id, cita.fecha, cita.hora, doc.sexo, doc.nombre, doc.cargo, doc.direccion FROM citas as cita join doctores as doc on doc.id = cita.id_doctor WHERE cita.id = $id;";
 $result = $mysqli->query($query);
 
 ?>

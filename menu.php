@@ -6,7 +6,7 @@
                 <i class="bi bi-list"></i>
             </button>
 
-            <a class="navbar-brand" href="index.php" ><img src="" loadinng="lazy" alt="LOGO" onerror="this.onerror=null; this.src=''" width="50px"></a>
+            <a class="navbar-brand" href="index.php" >MEDIKAPP</a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">

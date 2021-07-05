@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2021 a las 04:38:16
+-- Tiempo de generación: 03-07-2021 a las 02:17:05
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
-
+create database citasmedicas_db;
+use citasmedicas_db;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -76,22 +77,60 @@ INSERT INTO `doctores` (`id`, `nombre`, `cargo`, `direccion`, `sexo`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `emergencias`
+--
+
+CREATE TABLE `emergencias` (
+  `id` int(11) NOT NULL,
+  `telefono` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `emergencias`
+--
+
+INSERT INTO `emergencias` (`id`, `telefono`) VALUES
+(1, 911);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `farmacias`
+--
+
+CREATE TABLE `farmacias` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `direccion` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `farmacias`
+--
+
+INSERT INTO `farmacias` (`id`, `nombre`, `direccion`) VALUES
+(1, 'Dr. Pepito', 'La piedad. Mich');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `hospitales`
 --
 
 CREATE TABLE `hospitales` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(70) NOT NULL
+  `nombre` varchar(70) NOT NULL,
+  `direccion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `hospitales`
 --
 
-INSERT INTO `hospitales` (`id`, `nombre`) VALUES
-(1, 'Hospital malweder'),
-(2, 'Hospital Tuluwas'),
-(3, 'Hospital Marcelino');
+INSERT INTO `hospitales` (`id`, `nombre`, `direccion`) VALUES
+(1, 'Hospital malweder', 'La piedad, Mich.'),
+(2, 'Hospital Tuluwas', 'La piedad, Mich.'),
+(3, 'Hospital Marcelino', 'La piedad, Mich.');
 
 -- --------------------------------------------------------
 
@@ -151,6 +190,18 @@ ALTER TABLE `doctores`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `emergencias`
+--
+ALTER TABLE `emergencias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `farmacias`
+--
+ALTER TABLE `farmacias`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `hospitales`
 --
 ALTER TABLE `hospitales`
@@ -183,6 +234,18 @@ ALTER TABLE `citas`
 --
 ALTER TABLE `doctores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `emergencias`
+--
+ALTER TABLE `emergencias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `farmacias`
+--
+ALTER TABLE `farmacias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `hospitales`
